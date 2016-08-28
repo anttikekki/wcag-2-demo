@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>WCAG 2.0 demo</title>
+    <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="css/styles.css" type="text/css" rel="stylesheet" media="screen,projection">
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper container">
+        <a href="/" class="brand-logo">WCAG 2.0 demo</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="badges.html">Seuraava</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <div class="container">
+      <h1>WCAG 2.0 demo</h1>
+
+      <p>Tässä demossa käydään läpi <a href="https://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines (WCAG) 2.0</a> A- ja AA-tasot esimerkkien kautta.</p>
+
+      <ul>
+        <li>
+            <a><strong><span>1.</span></strong> <span>Perceivable</span></a>
+            <ul>
+               <li>
+                  <a href="#text-equiv"><strong><span>1.1</span></strong> <span>Text Alternatives</span></a>
+                  <ul>
+                     <li> <a href="#text-equiv-all"><strong><span>1.1.1</span></strong> <span>Non-text Content</span></a></li>
+                  </ul>
+               </li>
+               <li>
+                  <a href="#media-equiv"><strong><span>1.2</span></strong> <span>Time-based Media</span></a>
+                  <ul>
+                     <li> <a href="#media-equiv-av-only-alt"><strong><span>1.2.1</span></strong> <span>Audio-only and Video-only (Prerecorded)</span></a></li>
+                     <li> <a href="#media-equiv-captions"><strong><span>1.2.2</span></strong> <span>Captions (Prerecorded)</span></a></li>
+                     <li> <a href="#media-equiv-audio-desc"><strong><span>1.2.3</span></strong> <span>Audio Description or Media Alternative (Prerecorded)</span></a></li>
+                     <li> <a href="#media-equiv-real-time-captions"><strong><span>1.2.4</span></strong> <span>Captions (Live)</span></a></li>
+                     <li> <a href="#media-equiv-audio-desc-only"><strong><span>1.2.5</span></strong> <span>Audio Description (Prerecorded)</span></a></li>
+                     <li> <a href="#media-equiv-sign"><strong><span>1.2.6</span></strong> <span>Sign Language (Prerecorded)</span></a></li>
+                     <li> <a href="#media-equiv-extended-ad"><strong><span>1.2.7</span></strong> <span>Extended Audio Description (Prerecorded)</span></a></li>
+                     <li> <a href="#media-equiv-text-doc"><strong><span>1.2.8</span></strong> <span>Media Alternative (Prerecorded)</span></a></li>
+                     <li> <a href="#media-equiv-live-audio-only"><strong><span>1.2.9</span></strong> <span>Audio-only (Live)</span></a></li>
+                  </ul>
+               </li>
+               <li>
+                  <a href="#content-structure-separation"><strong><span>1.3</span></strong> <span>Adaptable</span></a>
+                  <ul>
+                     <li> <a href="#content-structure-separation-programmatic"><strong><span>1.3.1</span></strong> <span>Info and Relationships</span></a></li>
+                     <li> <a href="#content-structure-separation-sequence"><strong><span>1.3.2</span></strong> <span>Meaningful Sequence</span></a></li>
+                     <li> <a href="#content-structure-separation-understanding"><strong><span>1.3.3</span></strong> <span>Sensory Characteristics</span></a></li>
+                  </ul>
+               </li>
+               <li>
+                  <a href="#visual-audio-contrast"><strong><span>1.4</span></strong> <span>Distinguishable</span></a>
+                  <ul>
+                     <li> <a href="#visual-audio-contrast-without-color"><strong><span>1.4.1</span></strong> <span>Use of Color</span></a></li>
+                     <li> <a href="#visual-audio-contrast-dis-audio"><strong><span>1.4.2</span></strong> <span>Audio Control</span></a></li>
+                     <li> <a href="#visual-audio-contrast-contrast"><strong><span>1.4.3</span></strong> <span>Contrast (Minimum)</span></a></li>
+                     <li> <a href="#visual-audio-contrast-scale"><strong><span>1.4.4</span></strong> <span>Resize text</span></a></li>
+                     <li> <a href="#visual-audio-contrast-text-presentation"><strong><span>1.4.5</span></strong> <span>Images of Text</span></a></li>
+                     <li> <a href="#visual-audio-contrast7"><strong><span>1.4.6</span></strong> <span>Contrast (Enhanced)</span></a></li>
+                     <li> <a href="#visual-audio-contrast-noaudio"><strong><span>1.4.7</span></strong> <span>Low or No Background Audio</span></a></li>
+                     <li> <a href="#visual-audio-contrast-visual-presentation"><strong><span>1.4.8</span></strong> <span>Visual Presentation</span></a></li>
+                     <li> <a href="#visual-audio-contrast-text-images"><strong><span>1.4.9</span></strong> <span>Images of Text (No Exception)</span></a></li>
+                  </ul>
+               </li>
+            </ul>
+         </li>
+         <li>
+            <a><strong><span>2.</span></strong> <span>Operable</span></a>
+            <ul>
+               <li>
+                  <a href="#keyboard-operation"><strong><span>2.1</span></strong> <span>Keyboard Accessible</span></a>
+                  <ul>
+                     <li> <a href="#keyboard-operation-keyboard-operable"><strong><span>2.1.1</span></strong> <span>Keyboard</span></a></li>
+                     <li> <a href="#keyboard-operation-trapping"><strong><span>2.1.2</span></strong> <span>No Keyboard Trap</span></a></li>
+                     <li> <a href="#keyboard-operation-all-funcs"><strong><span>2.1.3</span></strong> <span>Keyboard (No Exception)</span></a></li>
+                  </ul>
+               </li>
+               <li>
+                  <a href="#time-limits"><strong><span>2.2</span></strong> <span>Enough Time</span></a>
+                  <ul>
+                     <li> <a href="#time-limits-required-behaviors"><strong><span>2.2.1</span></strong> <span>Timing Adjustable</span></a></li>
+                     <li> <a href="#time-limits-pause"><strong><span>2.2.2</span></strong> <span>Pause, Stop, Hide</span></a></li>
+                     <li> <a href="#time-limits-no-exceptions"><strong><span>2.2.3</span></strong> <span>No Timing</span></a></li>
+                     <li> <a href="#time-limits-postponed"><strong><span>2.2.4</span></strong> <span>Interruptions</span></a></li>
+                     <li> <a href="#time-limits-server-timeout"><strong><span>2.2.5</span></strong> <span>Re-authenticating</span></a></li>
+                  </ul>
+               </li>
+               <li>
+                  <a href="#seizure"><strong><span>2.3</span></strong> <span>Seizures</span></a>
+                  <ul>
+                     <li> <a href="#seizure-does-not-violate"><strong><span>2.3.1</span></strong> <span>Three Flashes or Below Threshold</span></a></li>
+                     <li> <a href="#seizure-three-times"><strong><span>2.3.2</span></strong> <span>Three Flashes</span></a></li>
+                  </ul>
+               </li>
+               <li>
+                  <a href="#navigation-mechanisms"><strong><span>2.4</span></strong> <span>Navigable</span></a>
+                  <ul>
+                     <li> <a href="#navigation-mechanisms-skip"><strong><span>2.4.1</span></strong> <span>Bypass Blocks</span></a></li>
+                     <li> <a href="#navigation-mechanisms-title"><strong><span>2.4.2</span></strong> <span>Page Titled</span></a></li>
+                     <li> <a href="#navigation-mechanisms-focus-order"><strong><span>2.4.3</span></strong> <span>Focus Order</span></a></li>
+                     <li> <a href="#navigation-mechanisms-refs"><strong><span>2.4.4</span></strong> <span>Link Purpose (In Context)</span></a></li>
+                     <li> <a href="#navigation-mechanisms-mult-loc"><strong><span>2.4.5</span></strong> <span>Multiple Ways</span></a></li>
+                     <li> <a href="#navigation-mechanisms-descriptive"><strong><span>2.4.6</span></strong> <span>Headings and Labels</span></a></li>
+                     <li> <a href="#navigation-mechanisms-focus-visible"><strong><span>2.4.7</span></strong> <span>Focus Visible</span></a></li>
+                     <li> <a href="#navigation-mechanisms-location"><strong><span>2.4.8</span></strong> <span>Location</span></a></li>
+                     <li> <a href="#navigation-mechanisms-link"><strong><span>2.4.9</span></strong> <span>Link Purpose (Link Only)</span></a></li>
+                     <li> <a href="#navigation-mechanisms-headings"><strong><span>2.4.10</span></strong> <span>Section Headings</span></a></li>
+                  </ul>
+               </li>
+            </ul>
+         </li>
+         <li>
+            <a href="#principle3" class="principle"><strong><span>3.</span></strong> <span>Understandable</span></a>
+            <ul>
+               <li>
+                  <a href="#meaning"><strong><span>3.1</span></strong> <span>Readable</span></a>
+                  <ul>
+                     <li> <a href="#meaning-doc-lang-id"><strong><span>3.1.1</span></strong> <span>Language of Page</span></a></li>
+                     <li> <a href="#meaning-other-lang-id"><strong><span>3.1.2</span></strong> <span>Language of Parts</span></a></li>
+                     <li> <a href="#meaning-idioms"><strong><span>3.1.3</span></strong> <span>Unusual Words</span></a></li>
+                     <li> <a href="#meaning-located"><strong><span>3.1.4</span></strong> <span>Abbreviations</span></a></li>
+                     <li> <a href="#meaning-supplements"><strong><span>3.1.5</span></strong> <span>Reading Level</span></a></li>
+                     <li> <a href="#meaning-pronunciation"><strong><span>3.1.6</span></strong> <span>Pronunciation</span></a></li>
+                  </ul>
+               </li>
+               <li>
+                  <a href="#consistent-behavior"><strong><span>3.2</span></strong> <span>Predictable</span></a>
+                  <ul>
+                     <li> <a href="#consistent-behavior-receive-focus"><strong><span>3.2.1</span></strong> <span>On Focus</span></a></li>
+                     <li> <a href="#consistent-behavior-unpredictable-change"><strong><span>3.2.2</span></strong> <span>On Input</span></a></li>
+                     <li> <a href="#consistent-behavior-consistent-locations"><strong><span>3.2.3</span></strong> <span>Consistent Navigation</span></a></li>
+                     <li> <a href="#consistent-behavior-consistent-functionality"><strong><span>3.2.4</span></strong> <span>Consistent Identification</span></a></li>
+                     <li> <a href="#consistent-behavior-no-extreme-changes-context"><strong><span>3.2.5</span></strong> <span>Change on Request</span></a></li>
+                  </ul>
+               </li>
+               <li>
+                  <a href="#minimize-error"><strong><span>3.3</span></strong> <span>Input Assistance</span></a>
+                  <ul>
+                     <li> <a href="#minimize-error-identified"><strong><span>3.3.1</span></strong> <span>Error Identification</span></a></li>
+                     <li> <a href="#minimize-error-cues"><strong><span>3.3.2</span></strong> <span>Labels or Instructions</span></a></li>
+                     <li> <a href="#minimize-error-suggestions"><strong><span>3.3.3</span></strong> <span>Error Suggestion</span></a></li>
+                     <li> <a href="#minimize-error-reversible"><strong><span>3.3.4</span></strong> <span>Error Prevention (Legal, Financial, Data)</span></a></li>
+                     <li> <a href="#minimize-error-context-help"><strong><span>3.3.5</span></strong> <span>Help</span></a></li>
+                     <li> <a href="#minimize-error-reversible-all"><strong><span>3.3.6</span></strong> <span>Error Prevention (All)</span></a></li>
+                  </ul>
+               </li>
+            </ul>
+         </li>
+         <li>
+            <a href="#principle4"><strong><span>4.</span></strong> <span>Robust</span></a>
+            <ul>
+               <li>
+                  <a href="#ensure-compat"><strong><span>4.1</span></strong> <span>Compatible</span></a>
+                  <ul>
+                     <li> <a href="#ensure-compat-parses"><strong><span>4.1.1</span></strong> <span>Parsing</span></a></li>
+                     <li> <a href="#ensure-compat-rsv"><strong><span>4.1.2</span></strong> <span>Name, Role, Value</span></a></li>
+                  </ul>
+               </li>
+            </ul>
+         </li>
+      </ul>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+  </body>
+</html>
