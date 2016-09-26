@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Periaate: Ymmärrettävä - 3.3.1 Virheen tunnistaminen</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">WCAG 2.0 demo</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>3.3.1 Virheen tunnistaminen</h1>
+
+      <p>Lähteet: 
+        <a href="https://www.w3.org/Translations/WCAG20-fi/#minimize-error"><span class="label label-default">W3 WCAG 2.0</span></a>
+        <a href="https://www.w3.org/WAI/WCAG20/quickref/#qr-minimize-error-identified"><span class="label label-default">W3 How to meet</span></a>
+        <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-identified.html"><span class="label label-default">W3 Understanding</span></a>
+        <a href="http://webaim.org/techniques/formvalidation/"><span class="label label-default">WebAIM lomakevinkkejä</span></a>
+        <a href="https://www.w3.org/WAI/tutorials/forms/instructions/"><span class="label label-default">W3 lomake tutorial</span></a>
+      </p>
+
+      <div class="well">Lomakenttien pakollisuudesta ja vaaditusta formaatista kerrotaan ennalta. Validointivirheet näytetään saavutettavasti.</div>
+
+      <ul>
+        <li>Lomakekentän pakollisuudesta kerrotaan selkeästi labelin tekstissä (esim. <i>pakollinen tieto</i>) tai kentän <code>aria-required</code>-parametrillä. Pelkkä tähti tai muut visuaalinen korostus pakollisuudesta ei riitä. <a href="http://webaim.org/techniques/formvalidation/#usable">WebAIM vinkkejä lomakkeisiin</a></li>
+        <li>Kentän <a href="https://www.w3.org/WAI/tutorials/forms/instructions/#placeholder-text">placeholder</a> ei korvaa labelia. Vaaditun syöttöformaatin kertominen pelkässä placeholderissa ei riitä, se pitää kertoa labelissa tai <code>aria-labelledby</code>-viitatuissa labeleissa. Labeli voi olla myös <a href="http://webaim.org/techniques/formvalidation/#hiding">piilotettu</a>, sillä ruudunlukijät löytävät sen <code>for</code>-propertyn avulla.</li>
+        <li>Lomakevalidoinnin virheiden korostamiseen ei riitä pelkkä punainen korostus. 
+          <ul>
+            <li>Kentässä voi olla <code>aria-invalid="true"</code> jolloin ruudunlukija ilmoittaa sen olemassaolosta fokuksen ulkopuolellakin.</li>
+            <li>Myös tekstimuotoiset virhetekstit ennen lomaketta ovat hyviä, varsinkin jos fokus siirretään sinne automaattisesti virheen sattuessa. Virheviesti voi olla fokuksen siirtävä linkki virheelliseen elementtiin.</li>
+            <li>Virhetekstin voi linkittää kenttään <code>aria-describedby</code>-propertyllä.</li>
+          </ul>
+        </li>
+      </ul>
+      
+    </div>
+
+  </body>
+</html>
