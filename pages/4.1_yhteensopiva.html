@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Periaate: Yhteensopiva - 4.1 Yhteensopiva</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">WCAG 2.0 demo</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>4.1 Yhteensopiva</h1>
+
+      <p>Lähteet: 
+        <a href="https://www.w3.org/Translations/WCAG20-fi/#robust"><span class="label label-default">W3 WCAG 2.0</span></a>
+        <a href="https://www.w3.org/WAI/WCAG20/quickref/#qr-ensure-compat-parses"><span class="label label-default">W3 How to meet 4.1.1</span></a>
+        <a href="https://www.w3.org/WAI/WCAG20/quickref/#qr-ensure-compat-rsv"><span class="label label-default">W3 How to meet 4.1.2</span></a>
+        <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-parses.html"><span class="label label-default">W3 Understanding 4.1.1</span></a>
+        <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html"><span class="label label-default">W3 Understanding 4.1.2</span></a>
+        <a href="https://www.w3.org/TR/wai-aria-1.1/"><span class="label label-default">WAI-ARIA</span></a>
+        <a href="https://www.w3.org/TR/wai-aria-practices/"><span class="label label-default">WAI-ARIA practices</span></a>
+      </p>
+
+      <div class="well">HTML:n pitää olla validia. Ei-natiivien UI-elementtien pitää tukea nimen, roolin, arvon ja tilan selvittämistä.</div>
+
+      <ul>
+        <li>HTML:n syntaksin pitää olla validia. Vanha kunnon <a href="http://validator.w3.org/">validator.w3.org</a> auttaa.</li>
+        <li>Ei-natiivien elementtien pitää kertoa itsestään tietoja ruudunlukijoiden ymmärtämässä muodossa jos ne toimivat muuten kuin oletetulla tavalla. Esimerkiksi välilehdet, datepicker, modaali, ennustava tekstinsyöttö jne. jotka on rakennettu käyttämällä esim. <code>div</code>, <code>span</code>tai <code>li</code> -tageja luomaan input-elementtejä.
+            <ul>
+               <li>Elementillä pitää olla WAI-ARIA rooli (esim. <code>&lt;ul role="menu"&gt;</code>). <a href="https://www.w3.org/TR/wai-aria/roles#widget_roles">Lista WAI-ARIA -rooleista</a>.</li>
+
+               <li>Elementillä pitää olla nimi. Natiivilla inputilla tai painikkeella sen kertoo <code>label</code> tai painikkeen teksti mutta intse tehdyillä kontrolleilla se pitää kertoa itse. Sen voi kertoa esim. <code>alt</code>, <code>title</code> tai <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-label"><code>aria-label</code></a> -parameterilla, esim. <code>&lt;span aria-label="Valitse makkaraperunat" /&gt;</code>. <a href="https://www.w3.org/TR/wai-aria-1.1/#namecalculation">WAI-ARIA nimen lisätietoja.</a></li>
+
+               <li>Elementin pitää toteuttaa fokusointi natiivilla tavalla. Esimerkiksi ennustavan tekstinsyötön valintalista voi olla pelkkiä <code>li</code> -elementtejä jolloin näppäimillä liikuttaessa valitun arvon korostus hoidetaan JavaScriptin kautta. Tällöin visuaalisesti fokuksen alla olevalla elementillä ei oikeasti ole natiivia fokusta, jolloin ruudunlukija ei tiedä valinnasta mitään. Käytä siis elementtejä jotka voivat saada fokuksen tai lisää elementtiin <code>tabindex</code>. <a href="https://www.w3.org/TR/wai-aria-1.1/#managingfocus">WAI-ARIA fokuksen lisätietoa</a>.</li>
+
+               <li>Kontrollin valinnan tilan pitää pystyä selvittämään muutenkin kuin visuaalisesti. Esimerkiksi <code>aria-checked</code> -parametrilla <code>&lt;span aria-label="Valitse makkaraperunat" aria-checked="true" /&gt;</code>. <a href="https://www.w3.org/TR/wai-aria-1.1/#introstates">WAI-ARIA tilan ilmaisun lisätietoa.</a></li>
+            </ul>
+        </li>
+      </ul>
+      
+    </div>
+
+  </body>
+</html>
